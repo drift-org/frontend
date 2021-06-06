@@ -5,6 +5,7 @@ import Signup from './components/auth/signup.component'
 import TempHome from './components/general/temphome.component'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import { StyleSheet, Text, View } from 'react-native';
+import LogIn from './components/auth/login.component';
 
 export default function App() {
   return ( 
@@ -12,6 +13,7 @@ export default function App() {
       <View style={styles.appcontainer}>
         <Route exact path='/' component={TempHome}/>
         <Route path='/signup' component={Signup}/>
+        <Route path='/login' component={LogIn}/>
       </View>
     </Router>
   );

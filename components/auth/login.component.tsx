@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, Pressable } from 'react-native';
 
-const SignUp:React.FC= () => {
-  const [name, changeName] = useState('')
+const LogIn:React.FC= () => {
   const [username, changeUsername] = useState('')
   const [password, changePassword] = useState('')
-  const [email, changeEmail] = useState('')
-  const [univeristy, changeUniversity] = useState('')
   const onSubmit = () => {
     /* 
     const tempObject = {
@@ -21,18 +18,12 @@ const SignUp:React.FC= () => {
   }
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>make your own adventure</Text>
-      <Text style={styles.subtitle}>Full Name</Text>
-      <TextInput style={styles.inputBox} value={name} onChangeText={(data: string) => changeName(data)}/>
+      <Text style={styles.title}>back to adventures</Text>
       <Text style={styles.subtitle}>Username</Text>
       <TextInput style={styles.inputBox} value={username} onChangeText={(data: string) => changeUsername(data)}/>
       <Text style={styles.subtitle}>Password</Text>
-      <TextInput style={styles.inputBox} value={password} onChangeText={(data: string) => changePassword(data)}/>
-      <Text style={styles.subtitle}>Email</Text>
-      <TextInput style={styles.inputBox} value={email} onChangeText={(data: string) => changeEmail(data)}/>
-      <Text style={styles.subtitle}>University</Text>
-      <TextInput style={styles.inputBox} value={univeristy} onChangeText={(data: string) => changeUniversity(data)}/>
-      <Pressable style={styles.button} onPress={onSubmit}><Text style={styles.buttonText}>Sign Up</Text></Pressable>
+      <TextInput style={styles.inputBox} value={password} onChangeText={(data: string) => changeUsername(data)}/>
+      <Pressable style={styles.button} onPress={onSubmit}><Text style={styles.buttonText}>Log In</Text></Pressable>
     </View>
   );
 }
@@ -54,6 +45,7 @@ const styles = StyleSheet.create({
     textShadowColor: "#998440",
     textAlign: "center",
     marginBottom: "2%",
+    paddingHorizontal: "4%"
   },
   subtitle: {
     color: "#FFFFFF",
@@ -95,4 +87,4 @@ const styles = StyleSheet.create({
 */
   
   
-export default SignUp
+export default LogIn 
