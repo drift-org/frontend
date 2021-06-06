@@ -1,3 +1,4 @@
+
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import Signup from './components/auth/signup.component'
@@ -20,5 +21,6 @@ const styles = StyleSheet.create({
   appcontainer: {
     height: '100%',
     width: '100%'
+
   },
 });
