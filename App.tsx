@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import FindFriends from './components/homepage/find-friends.component';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { StartDrift } from './components/drift/start-drift.component';
 
 const Stack = createStackNavigator();
 
@@ -13,7 +14,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen
           name='FindFriends'
-          component={FindFriends}
+          component={StartDrift}
           options={{
             headerShown: false,
           }}
@@ -26,8 +27,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
