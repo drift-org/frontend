@@ -4,10 +4,10 @@ import { StyleSheet, Text, View } from 'react-native';
 import FindFriends from './pages/find-friends.component';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
+import { registerRootComponent } from 'expo';
 const Stack = createStackNavigator();
 
-export default function App() {
+function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -22,6 +22,7 @@ export default function App() {
     </NavigationContainer>
   );
 }
+export default registerRootComponent(App);
 
 const styles = StyleSheet.create({
   container: {
