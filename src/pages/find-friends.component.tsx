@@ -4,12 +4,7 @@ import Button from "../components/Button";
 import * as Styles from "../Styles";
 export default function HomePage() {
   return (
-    <Button
-      text="hello"
-      textColor="#ffffff"
-      size={Styles.Size.Small}
-      borderType={Styles.BorderType.BUTTON_BORDER_RADIUS_ROUNDED}
-    ></Button>
+    <Button text="hello" size={Styles.Size.Small}></Button>
     // <View style={styles.container}>
     //   <Text style={styles.title}>find friends</Text>
     //   <TextInput style={styles.input} placeholder="username or email" />

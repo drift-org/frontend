@@ -1,5 +1,11 @@
 import React from "react";
 import * as Styles from "../Styles";
+const BUTTON_HEIGHT = 3;
+const BUTTON_WIDTH = 25;
+enum BorderType {
+  BUTTON_BORDER_RADIUS_ROUNDED = 14,
+  BUTTON_BORDER_RADIUS_BLOCK = 7,
+}
 // import { Pressable, StyleSheet, Text, View } from "react-native";
 interface ButtonProps {
   overriddenStyles?: any;
@@ -8,7 +14,7 @@ interface ButtonProps {
   textColor?: string;
   borderColor?: string;
   size?: Styles.Size;
-  borderType?: Styles.BorderType;
+  borderType?: BorderType;
   borderWidth?: number;
 }
 const Button = ({
@@ -17,13 +23,13 @@ const Button = ({
   textColor = "#ffffff",
   size = Styles.Size.Medium,
   overriddenStyles = {},
-  borderType = Styles.BorderType.BUTTON_BORDER_RADIUS_BLOCK,
+  borderType = BorderType.BUTTON_BORDER_RADIUS_BLOCK,
 }: ButtonProps) => {
   const styles = {
     background: backgroundColor,
     color: textColor,
-    height: Styles.BUTTON_HEIGHT * size + "%",
-    width: Styles.BUTTON_WIDTH * size + "%",
+    height: BUTTON_HEIGHT * size + "%",
+    width: BUTTON_WIDTH * size + "%",
     borderRadius: borderType * size,
     borderWidth: 0,
     fontSize: Styles.FONT_SIZE * size,
