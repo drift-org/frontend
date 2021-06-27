@@ -1,23 +1,12 @@
-<<<<<<< HEAD
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import FindFriends from "./pages/find-friends.component";
-
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { registerRootComponent } from "expo";
-=======
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import FindFriends from './pages/find-friends.component';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { registerRootComponent } from 'expo';
-import { useFonts } from '@expo-google-fonts/nunito-sans';
-import * as NunitoSans from '@expo-google-fonts/nunito-sans';
->>>>>>> origin/main
+import { useFonts } from "@expo-google-fonts/nunito-sans";
+import * as NunitoSans from "@expo-google-fonts/nunito-sans";
 const Stack = createStackNavigator();
 
 function App() {
