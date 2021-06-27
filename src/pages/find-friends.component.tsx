@@ -1,11 +1,20 @@
 import React from 'react';
-import { Pressable, StyleSheet, Text, View, TextInput } from 'react-native';
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  Image,
+} from 'react-native';
 import InputBox from '../components/InputBox.component';
+import PasswordInputBox from '../components/PasswordInputBox.component';
 
 export default function HomePage() {
   return (
     <View>
       <InputBox label='email' />
+      <PasswordInputBox />
     </View>
   );
 }

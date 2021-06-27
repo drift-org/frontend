@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import {
   Pressable,
   StyleSheet,
@@ -9,14 +9,18 @@ import {
 } from 'react-native';
 
 export interface InputBoxProps extends TextInputProps {
-  label: string;
+  label?: string;
+  icon?: ReactNode;
 }
 
 export default function InputBox(props: InputBoxProps) {
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>{props.label}</Text>
-      <TextInput {...props} style={styles.input} />
+      {props.label ? <Text style={styles.label}>{props.label}</Text> : null}
+      <View style={styles.innerContainer}>
+        <TextInput {...props} style={styles.input} />
+        {props.icon}
+      </View>
     </View>
   );
 }
@@ -32,6 +36,12 @@ const styles = StyleSheet.create({
     paddingRight: 15,
     justifyContent: 'center',
     alignItems: 'flex-start',
+  },
+  innerContainer: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    width: '100%',
+    alignItems: 'center',
   },
   label: {
     fontFamily: 'NunitoSans_600SemiBold',
