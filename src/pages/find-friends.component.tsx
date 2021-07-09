@@ -1,15 +1,16 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View, TextInput } from 'react-native';
+import Page from '../components/Page.component';
 
 export default function HomePage() {
   return (
-    <View style={styles.container}>
+    <Page blobs>
       <Text style={styles.title}>find friends</Text>
       <TextInput style={styles.input} placeholder='username or email' />
       <Pressable style={styles.button}>
         <Text style={styles.text}>{'search'}</Text>
       </Pressable>
-    </View>
+    </Page>
   );
 }
 
