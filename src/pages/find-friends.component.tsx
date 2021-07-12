@@ -1,4 +1,3 @@
-import React from 'react';
 import { Pressable, StyleSheet, Text, View, TextInput } from 'react-native';
 import Page from '../components/Page.component';
 
