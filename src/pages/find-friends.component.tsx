@@ -6,12 +6,11 @@ import Button from "../components/Button";
 export default function HomePage() {
   return (
     <Page blobs>
-      <Button text="hello" size={Styles.Size.Small}></Button>
-      {/* <Text style={styles.title}>find friends</Text>
-      <TextInput style={styles.input} placeholder='username or email' />
+      <Text style={styles.title}>find friends</Text>
+      <TextInput style={styles.input} placeholder="username or email" />
       <Pressable style={styles.button}>
-        <Text style={styles.text}>{'search'}</Text>
-      </Pressable> */}
+        <Text style={styles.text}>{"search"}</Text>
+      </Pressable>
     </Page>
   );
 }
