@@ -1,21 +1,15 @@
-import React from 'react';
-import {
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  Image,
-} from 'react-native';
-import InputBox from '../components/InputBox.component';
-import PasswordInputBox from '../components/PasswordInputBox.component';
+import { Pressable, StyleSheet, Text, View, TextInput } from 'react-native';
+import Page from '../components/Page.component';
 
 export default function HomePage() {
   return (
-    <View>
-      <InputBox label='email' />
-      <PasswordInputBox />
-    </View>
+    <Page blobs>
+      <Text style={styles.title}>find friends</Text>
+      <TextInput style={styles.input} placeholder='username or email' />
+      <Pressable style={styles.button}>
+        <Text style={styles.text}>{'search'}</Text>
+      </Pressable>
+    </Page>
   );
 }
 
